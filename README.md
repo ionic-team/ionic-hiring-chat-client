@@ -19,12 +19,12 @@ The Client expects the following API endpoints:
 *Note the syntax `{ username, password }` means `{ username: theUsername, password: thePassword }`*:
 
  * `/api/v1/user/login`
-  - `POST` - `{ username, password }` - log a user in
+   - `POST` - `{ username, password }` - log a user in
  * `/api/v1/user/signup`
-  - `POST` - `{ username, password }` - sign a user up
+   - `POST` - `{ username, password }` - sign a user up
  * `/api/v1/rooms`
-  - `GET` - returns the list of rooms
+   - `GET` - returns the list of rooms
  * `/api/v1/room`
-  - `POST` - create a room
+   - `POST` - create a room
  * `/api/v1/rooms/:roomName/chats`
-  - `GET` - get the chats for this room
+   - `GET` - get the chats for this room
