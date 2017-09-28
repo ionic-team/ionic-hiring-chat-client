@@ -20,11 +20,13 @@ The Client expects the following API endpoints:
 
  * `/api/v1/user/login`
    - `POST` - `{ username, password }` - log a user in
+      - Returns a sane user model back with a `token` field that is a JWT
  * `/api/v1/user/signup`
    - `POST` - `{ username, password }` - sign a user up
+      - Returns a sane user model back with a `token` field that is a JWT 
  * `/api/v1/rooms`
    - `GET` - returns the list of rooms
  * `/api/v1/room`
-   - `POST` - create a room
+   - `POST` - `{ name }` - create a room with name `name`
  * `/api/v1/rooms/:roomName/chats`
    - `GET` - get the chats for this room
