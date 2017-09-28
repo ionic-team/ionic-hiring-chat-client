@@ -50,6 +50,6 @@ The client will try to connect to a simple web socket server in order to handle 
 
 The WS path is `ws://SOCKET_URL/chat`
 
-When the client sends a chat, it sends the chat message serialized as JSON to the WS server. The WS server then simply broadcasts the exact message back to all clients.
+When the client sends a chat, it sends the chat message to the REST API *and* as serialized as JSON to the WS server. The WS server then simply broadcasts the exact message back to all clients.
 
 The WS client doesn't send auth information so authentication on the WS server isn't part of the scope.
