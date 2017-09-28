@@ -2,7 +2,7 @@
 
 This is a simple chat client that needs a backend.
 
-You should implement a simple REST API as described below, storing `users`, `rooms`, and `chats`.
+You should implement a simple API as described below, storing `users`, `rooms`, and `chats`.
 
 ## Getting Started
 
