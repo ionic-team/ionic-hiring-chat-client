@@ -16,8 +16,9 @@ By default the app has a mocked-out API. To remove the mocking system, edit `src
 
 In `src/api.ts` you can adjust the `API_URL` for the Rest API, and `SOCKET_URL` for the web socket server. By default they are set to
 
-`API_URL`: `http://localhost:4000`
-`SOCKET_URL`: `localhost:8080`
+`API_URL` - `http://localhost:4000`
+
+`SOCKET_URL` - `localhost:8080`
 
 Feel free to adjust these as you see fit.
 
