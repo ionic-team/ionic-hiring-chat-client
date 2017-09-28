@@ -20,10 +20,10 @@ The Client expects the following API endpoints:
 
  * `/api/v1/user/login`
    - `POST` - `{ username, password }` - log a user in
-      - Returns { username, token } where `token` is a JWT
+      - Returns `{ username, token }` where `token` is a JWT
  * `/api/v1/user/signup`
    - `POST` - `{ username, password }` - sign a user up
-      - Returns { username, token } where `token` is a JWT
+      - Returns `{ username, token }` where `token` is a JWT
  * `/api/v1/rooms`
    - `GET` - returns the list of rooms
       - Returns `[{ name }]` where `name` is the name of the room
