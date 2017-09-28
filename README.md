@@ -46,7 +46,7 @@ The Client expects the following API endpoints that accept/return JSON:
       - Returns `{ name }`
  * `/api/v1/rooms/:roomName/chats`
    - `GET` - get the chats for this room
-      - Returns `[{ room, username, text }]` where `room` is the name of the room, `username` the username of the user who created the chat, and `text` the content of the chat.
+      - Returns `[{ at, room, username, text }]` where `at` is an ISO 8601 formatted date string, `room` is the name of the room, `username` the username of the user who created the chat, and `text` the content of the chat.
       
 ## Web Sockets
 
