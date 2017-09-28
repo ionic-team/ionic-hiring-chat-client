@@ -4,13 +4,22 @@ This is a simple chat client that needs a backend.
 
 ## Getting Started
 
-First, clone this repo and run `npm install`:
+First, fork then clone this repo and run `npm install`:
 
 To test the client, run `npm start`.
 
 ## Removing mock/dev mode
 
 By default the app has a mocked-out API. To remove the mocking system, edit `src/api.ts` and set `MOCK = false`.
+
+## Setting API/Web Socket Host
+
+In `src/api.ts` you can adjust the `API_URL` for the Rest API, and `SOCKET_URL` for the web socket server. By default they are set to
+
+`API_URL`: `http://localhost:4000`
+`SOCKET_URL`: `localhost:8080`
+
+Feel free to adjust these as you see fit.
 
 ## API
 
@@ -33,3 +42,9 @@ The Client expects the following API endpoints:
  * `/api/v1/rooms/:roomName/chats`
    - `GET` - get the chats for this room
       - Returns `[{ room, username, text }]` where `room` is the name of the room, `username` the username of the user who created the chat, and `text` the content of the chat.
+      
+## Web Sockets
+
+The client will try to connect to a simple web socket server in order to handle updates across client instances.
+
+
