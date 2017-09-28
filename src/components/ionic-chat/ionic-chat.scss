@@ -1,0 +1,28 @@
+ionic-chat {
+  .content {
+    padding: 15px;
+  }
+  .room-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    margin-right: 4px;
+  }
+
+  .chat {
+    display: flex;
+  }
+  .chat-time {
+    font-size: 13px;
+    width: 60px;
+  }
+  .chat-text {
+    flex: 1;
+    font-size: 14px;
+  }
+  .chat-username {
+    color: #007ACC;
+    margin-right: 5px;
+    font-weight: bold;
+  }
+}
