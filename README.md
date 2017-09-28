@@ -4,6 +4,8 @@ This is a simple chat client that needs a backend.
 
 You should implement a simple API as described below, storing `users`, `rooms`, and `chats`.
 
+Each endpoint (except `login` and `signup`) should expect a JWT token supplied in the `Authorization` header using the `Bearer` method, so the header will look like `Authorization: Bearer TOKEN`. The `login` and `signup` methods should return a JWT token in the `token` field of the JSON response.
+
 ## Getting Started
 
 First, fork then clone this repo and run `npm install`:
@@ -26,7 +28,7 @@ Feel free to adjust these as you see fit.
 
 ## API
 
-The Client expects the following API endpoints:
+The Client expects the following API endpoints that accept/return JSON:
 
 *Note the syntax `{ username, password }` means `{ username: theUsername, password: thePassword }`*:
 
