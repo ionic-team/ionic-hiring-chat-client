@@ -47,6 +47,8 @@ The Client expects the following API endpoints that accept/return JSON:
  * `/api/v1/rooms/:roomName/chats`
    - `GET` - get the chats for this room
       - Returns `[{ at, room, username, text }]` where `at` is an ISO 8601 formatted date string for the creation time, `room` is the name of the room, `username` the username of the user who created the chat, and `text` the content of the chat.
+   - `POST` - `{ room, username, text } post a new chat to this room
+      - Returns the `[{ at, room, username, text }]` where `at` is an ISO 8601 formatted date string for the creation time, `room` is the name of the room, `username` the username of the user who created the chat, and `text` the content of the chat that was just created.
       
 ## Web Sockets
 
