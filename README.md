@@ -48,7 +48,7 @@ The Client expects the following API endpoints that accept/return JSON:
    - `GET` - get the chats for this room
       - Returns `[{ at, room, username, text }]` where `at` is an ISO 8601 formatted date string for the creation time, `room` is the name of the room, `username` the username of the user who created the chat, and `text` the content of the chat.
    - `POST` - `{ room, username, text } post a new chat to this room
-      - Returns the `[{ at, room, username, text }]` where `at` is an ISO 8601 formatted date string for the creation time, `room` is the name of the room, `username` the username of the user who created the chat, and `text` the content of the chat that was just created.
+      - Returns the `[{ at, room, username, text }]` where `at` is an ISO 8601 formatted date string for the creation time, `room` is the name of the room, `username` the username of the user who created the chat, and `text` the content of the chat that was just created. **NOTE** This response is what is broadcast over the websocket connection.
       
 ## Web Sockets
 
@@ -56,6 +56,6 @@ The client will try to connect to a simple web socket server in order to handle 
 
 The WS path is `ws://SOCKET_URL/chat`
 
-When the client sends a chat, it sends the chat message to the REST API *and* as serialized as JSON to the WS server. The WS server then simply broadcasts the exact message back to all clients.
+When the client sends a chat, it sends the chat message to the REST API *and* as serialized as JSON to the WS server. The WS server then simply broadcasts the exact message back to all clients. The message that is broadcast is the response JSON from the api `POST` to `/api/v1/rooms/:roomName/chats`
 
 The WS client doesn't send auth information so authentication on the WS server isn't part of the scope.
