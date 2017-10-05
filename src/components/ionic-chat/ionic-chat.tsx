@@ -78,10 +78,11 @@ export class IonicChat {
     this.selectRoom(newRoom);
   }
 
-  selectRoom(room) {
+  async selectRoom(room) {
     console.log('Opening room', room);
     this.selectedRoom = room;
-    this.selectedRoom.loadChats(this.user);
+    await this.selectedRoom.loadChats(this.user);
+    this.chatQueue = [];
     this.closeMenu();
   }
 
@@ -100,7 +101,6 @@ export class IonicChat {
   }
 
   handleChatInputChanged(event) {
-    console.log('Changed', event);
     this.chatValue = event.target.value;
   }
 

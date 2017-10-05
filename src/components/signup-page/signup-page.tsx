@@ -37,7 +37,6 @@ export class SignupPage {
 
   setField(field, event) {
     this[field] = event.target.value;
-    console.log('Setting state', field, event.target.value);
   }
 
   render() {

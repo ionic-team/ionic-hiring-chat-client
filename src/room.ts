@@ -10,24 +10,24 @@ class Room {
     }
 
     async loadChats(user) {
-        this.chats = await apiFetch(`/api/v1/rooms/${this.name}/chats`, user && user.token) || [];
+        this.chats = await apiFetch(`/api/v1/rooms/${this.name}/chats`, user && user.token, 'GET') || [];
+        console.log('loaded - New chats', this.chats);
     }
 
     addChat(chat) {
         this.chats = [...this.chats, chat];
+        console.log('added - New chats', this.chats);
     }
 
     async chat(message, user) {
-        console.log('CHATTING', message, user);
         this.chats = [...this.chats, { text: message, at: new Date(), username: user.username }];
 
-        return apiFetch(`/api/v1/rooms/${this.name}/chat`, user && user.token, {
-            method: 'POST',
-            data: {
-                room: this.name,
-                username: user.username,
-                text: message
-            }
+        console.log('New chats', this.chats);
+
+        return apiFetch(`/api/v1/rooms/${this.name}/chat`, user && user.token, 'POST', {
+            room: this.name,
+            username: user.username,
+            text: message
         });
     }
 }
